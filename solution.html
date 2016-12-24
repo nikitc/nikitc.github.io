@@ -14,15 +14,12 @@
 	</head>
   <body>
 	
-	<p>\(  \int_{-\infty}^{+\infty} x \frac{\alpha}{2} * e^{- \alpha *   | x -  \beta |} = \alpha/2 \int_{-\infty}^{+\infty} x  * e^{- \alpha *   | x -  \beta |}  \)</p>
-	<p>Применим интегрирование по частям:</p>
-	<p>\( u=x => du = x' dx = dx\)</p>
-	<p>\( dv=e^{- \alpha *   | x -  \beta |} => v = int e^{- \alpha *   | x -  \beta |} = \frac{1}{-\alpha} * e^{- \alpha *   | x -  \beta |}\)</p>
-		<p>получим</p>
-	  <p>\( \frac{x}{-\alpha} * e^{- \alpha *   | x -  \beta |} +  \frac{1}{\alpha} \int_{-\infty}^{+\infty} e^{- \alpha *   | x -  \beta |} dx\)</p>
-	<p>Посчитаем второй интеграл</p>
-	<p>\( \int_{-\infty}^{+\infty}  e^{- \alpha *   | x -  \beta |} dx = \int_{-\infty}^{+\beta}  e^{\alpha *   ( x -  \beta )} dx  + \int_{\beta}^{+\infty}  e^{- \alpha *   ( x -  \beta )} dx = 1 - 0 + 0 - 1 = 0 \)</p>
-			
+	<p>\(  \int_{-\infty}^{+\infty} x \frac{\alpha}{2} * e^{- \alpha *   | x -  \beta |} = \alpha/2 \int_{-\infty}^{\beta} x  * e^{ \alpha * ( x -  \beta) } +  \int_{\beta}^{+\infty} x  * e^{- \alpha *  (x -  \beta) }  \)</p>
+	<p>Посчитаем первый:</p>
+	<p>\( t=x-\beta => x=t+\beta \)</p>
+	<p>\( - \int_{-\infty}^{\beta} (t+\beta)* e^{\beta t} \)</p>
+	<p>\( - (\int_{-\infty}^{\beta} t* e^{\beta t} + \int_{-\infty}^{\beta} \beta * e^{\beta t}) \)</p>
+	<p>Посчитаем первый тут:</p>
 		
   </body>
 </html>
