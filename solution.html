@@ -13,7 +13,17 @@
 		</script>
 		<script type="text/javascript" src="/MathJax-2.6-latest/MathJax.js?config=default&locale=ru"></script>
 	</head>
-	<body>
+  <body>
+	<p>
+	  \(  \int_-inf^+inf x \alpha/2 * e^{- \alpha *   | x -  \beta |} = \alpha/2 \int_-inf^+inf x  * e^{- \alpha *   | x -  \beta |}  \)
+		Применим интегрирование по частям:
+	  \( u=x => du = x' dx = dx\)
+	  \( dv=e^{- \alpha *   | x -  \beta |} => v = int e^{- \alpha *   | x -  \beta |} = 1/-\alpha * e^{- \alpha *   | x -  \beta |}\)
+		получим
+	  \( x/-\alpha * e^{- \alpha *   | x -  \beta |} +  1/\alpha \int_-inf^+inf x  * e^{- \alpha *   | x -  \beta |} dx\)
+		
+		
+	</p>		
 		
   </body>
 </html>
