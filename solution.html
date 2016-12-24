@@ -14,7 +14,7 @@
 	</head>
   <body>
 	
-	<p>\(  \int_{-\infty}^{+\infty} x \frac{\alpha}{2} * e^{- \alpha *   | x -  \beta |} = \alpha/2 (\int_{-\infty}^{\beta} x  * e^{ \alpha * ( x -  \beta) } +  \int_{\beta}^{+\infty} x  * e^{- \alpha *  (x -  \beta) })  \)</p>
+	<p>\(  \int_{-\infty}^{+\infty} x \frac{\alpha}{2} * e^{- \alpha *   | x -  \beta |} = \alpha/2 int_{-\infty}^{\beta} x  * e^{ \alpha * ( x -  \beta) } +  \int_{\beta}^{+\infty} x  * e^{- \alpha *  (x -  \beta) })  \)</p>
 	<p>Посчитаем первый:</p>
 	<p>\( t=x-\beta => x=t+\beta \)</p>
 	<p>\(  \int_{-\infty}^{\beta} (t+\beta)* e^{\alpha t} \)</p>
@@ -37,7 +37,7 @@
 	<p>\( \int udv =  uv - \int vdu\)</p>
 	<p>\( \frac{\beta}{-\alpha} * e^{-\alpha \beta} - \frac{1}{-\alpha} \int_{-\infty}^{\beta} e^{-\alpha t} dt= \frac{\beta}{-\alpha} * e^{-\alpha \beta}  - \frac{1}{-\alpha} e^{-\alpha \beta} \)</p>
 	<p>В итоге</p>
-	<p>\( \frac{\beta}{-\alpha} * e^{-\alpha \beta}  - \frac{1}{-\alpha} e^{-\alpha \beta} + \beta  *  e^{-\alpha \beta} = \frac{(\beta-1) e^{-\alpha \beta}{-\alpha} + \beta  *  e^{-\alpha \beta} \)</p>
+	<p>\( \frac{\beta}{-\alpha} * e^{-\alpha \beta}  - \frac{1}{-\alpha} e^{-\alpha \beta} + \beta  *  e^{-\alpha \beta} = \frac{\beta-1) e^{-\alpha \beta}{-\alpha} + \beta  *  e^{-\alpha \beta} \)</p>
   	<p>Собираем всё</p>
 	<p>\( \frac{(\beta-1) e^{\alpha \beta}{\alpha} + \beta  *  e^{\alpha \beta} + \frac{(\beta-1) e^{-\alpha \beta}{-\alpha} + \beta  *  e^{-\alpha \beta} \)</p>
 	</body>
