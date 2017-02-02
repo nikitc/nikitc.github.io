@@ -9,7 +9,7 @@
 			MathJax.Hub.Config({
  				displayAlign: "center",
  				"HTML-CSS": { linebreaks: { automatic: true, width: "95% container" } },
-         			   SVG: { linebreaks: { automatic: true } }
+         			   SVG: { linebreaks: { automatic: true } },TeX: {equationNumbers: {autoNumber: "AMS"}, Augment: {  Definitions: {}}}
 			});
 		</script>
 	</head>
@@ -43,11 +43,15 @@
 				<div id="content_col">
 					<div class="entry_title">Первые интегралы системы дифференциальных уравнений и понижение порядка. Симметричная запись системы дифференциальных уравнений.</div>
 					<p>Рассмотрим автономную систему ДУ.
-						\[\dot{X}=F(X). \hspace{1cm}(10)\]
+						\begin{equation}\label{10}
+							\dot{X}=F(X). \tag{10}
+						\end{equation}
 						\[X=(x_{1} ,x_{2} ,\ldots ,x_{n} )^T, \]
 						\[F(X)=\left(f_{1} (x_{1} ,x_{2} ,\ldots ,x_{n} ),f_{2} (x_{1} ,x_{2} ,\ldots ,x_{n} ), \ldots ,f_{n} (x_{1} ,x_{2} ,\ldots ,x_{n} )\right)^T. \]
- 					В скалярной форме система \((10)\) имеет вид
-						\[\dot{x}_{i} =f_{i} (x_{1} ,x_{2} ,\ldots ,x_{n} ),\quad i=\overline{1,n}, \hspace{1cm}(11)\]
+ 					В скалярной форме система (\ref{10}) имеет вид
+ 						\begin{equation}\label{11}
+							\dot{x}_{i} =f_{i} (x_{1} ,x_{2} ,\ldots ,x_{n} ),\quad i=\overline{1,n}, \tag{11}
+						\end{equation}
 					Функции \(f_{i} (x_{1} ,x_{2} ,\ldots ,x_{n} )\) непрерывными вместе с
 					\( \frac{\partial f_{i} }{\partial x_{k} } \quad \; (i,k=\overline{1,n})\) в \( \Gamma \) пространства \(x_{1} ,x_{2} ,\ldots ,x_{n}\).</p>
 					<p>\( \underline{Определение} \textbf{. Первым интегралом системы} \quad \dot{X}=F(X)\) в области \(G\subset \Gamma \) называется функция \(U(X)=U(x_{1} ,x_{2} ,\ldots ,x_{n} )\), если
@@ -98,7 +102,7 @@
 					\( \left\{\frac{dU_{j} }{dx_{i} } \left(X_{0} \right),\quad 1\le j\le m,\; 1\le i\le n\right\}\) имеет ранг \(m\).</p>
 					<p><div class="example">Теорема</div>
 					Если известны \(m \quad (m < n) \) независимых в точке \(X^{0} \in \Gamma \) первых интегралов
- 					системы (10) , то порядок системы можно понизить на \(m\) единиц в некоторой окрестности точки \(X^{0} \).
+ 					системы (\ref{10}) , то порядок системы можно понизить на \(m\) единиц в некоторой окрестности точки \(X^{0} \).
  					<div class="example">Доказательство</div>
  					Без ограничения общности возьмём отличный от нуля определитель \(m\)-го порядка,
  					составленный из первых \(m\) столбцов матрицы \(\left\{\frac{dU_{j} }{dx_{i} } \left(X_{0} \right)\right\}\),
@@ -137,9 +141,10 @@
 
 					Якобиан отличен от нуля не только в точке \(X^{0} \), но и в некоторой окрестности точки \(X^{0} \), так как элементы якобиана являются непрерывными функциями.
 
-					В переменных \(y_{1} ,y_{2} ,\ldots ,y_{n} \) система \((11)\) примет вид
-
-						\[\dot{y}_{i} =g_{i} \left(y_{1} ,y_{2} ,\ldots ,y_{n} \right)\quad \overline{i=1,n}. \hspace{1cm}(12)\]
+					В переменных \(y_{1} ,y_{2} ,\ldots ,y_{n} \) система (\ref{11}) примет вид
+						\begin{equation}\label{12}
+							\dot{y}_{i} =g_{i} \left(y_{1} ,y_{2} ,\ldots ,y_{n} \right)\quad \overline{i=1,n}. \tag{12}
+						\end{equation}
 					</p>
 					<p>Если \( i=\overline{1,m} \), то по критерию первого интеграла имеем
 						\[\frac{dy_{i} }{dt} =\frac{dU_{i} (X)}{dt} =\sum _{i=1}^{n}\frac{\partial U_{i} (X)}{\partial x_{i} }  f_{i} (X)=0, \]

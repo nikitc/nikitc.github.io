@@ -50,6 +50,14 @@ ul li
 	padding: 2px 0;
 }
 
+#content_col a
+{
+	font-size: 18px;
+	font-family: times;
+	text-decoration: none;
+	color: red;
+}
+
 .global_container 
 {
 	margin-left: auto;
@@ -64,6 +72,31 @@ ul li
 	left:50%;
 	margin-left:-86px;
 
+}
+
+.graphics
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+}
+
+.graphics p 
+{
+	text-align: center;
+	align-self: flex-start;
+}
+
+.field2 img
+{
+	width: 95%;
+}
+
+.field2
+{
+	text-align: center;
+	flex: 1 50%;
 }
 
 #content_container 

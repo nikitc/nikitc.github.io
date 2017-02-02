@@ -9,7 +9,7 @@
 			MathJax.Hub.Config({
  				displayAlign: "center",
  				"HTML-CSS": { linebreaks: { automatic: true, width: "95% container" } },
-         			   SVG: { linebreaks: { automatic: true } }
+         			   SVG: { linebreaks: { automatic: true } },TeX: {equationNumbers: {autoNumber: "AMS"}, Augment: {  Definitions: {}}}
 			});
 		</script>
 	</head>
@@ -50,7 +50,9 @@
 				<div id="content_col">
 					<div class="entry_title">Интегрирующий множитель</div>
 					<p>Рассмотрим уравнение
-						\[M(x,y)dx+N(x,y)dy=0.\]
+						\begin{equation}\label{1}
+							M(x,y)dx+N(x,y)dy=0
+						\end{equation}
 					Функция \(\mu(x,y)\), определенная в области \(\tilde{\Gamma}\),
 					называется \(\textbf{интегрирующим множителем}\) уравнения
 					\((1)\), коэффициенты которого \(M(x,y)\) и \(N(x,y)\)
@@ -62,10 +64,10 @@
 					дифференциалах.</p>
 					<div class="example">Теорема 2</div>
 					<p>Если существует общий интеграл \(U(x,y)=C\) уравнения
-					\((1)\), то существует и интегрирующий множитель для этого
+					(\ref{1}), то существует и интегрирующий множитель для этого
 					уравнения.</p>
 					<div class="example">Доказательство.</div>
-					<p>Пусть точка \((x_0,y_0)\in\Gamma\) произвольна, \(y=\varphi(x)\) - решение уравнения \((1)\), \(\varphi(x_0)=y_0\) и \(U(x_0,y_0)=C_0\).
+					<p>Пусть точка \((x_0,y_0)\in\Gamma\) произвольна, \(y=\varphi(x)\) - решение уравнения (\ref{1}), \(\varphi(x_0)=y_0\) и \(U(x_0,y_0)=C_0\).
 					Подставим это решение в равенство \(U(x,y)=C_0\).</p>
 					<p>Вычислим дифференциал функции \(U\left[x,\varphi(x)\right]:\)
 						\[{\left[\frac{\partial U}{\partial x}+\frac{\partial U}{\partial
@@ -76,10 +78,13 @@
 					Также вдоль кривой \(y=\varphi(x)\) выполняется равенство
 						$$M(x,y)dx+N(x,y)dy=0.$$
 					Получена система уравнений относительно \(dx\) и \(dy\)
-					<\begin{equation}
-					\label{g1p7_2} \left \{\begin{aligned} \frac{\partial U}{\partial x}dx+\frac{\partial U}{\partial y}dy=0,\\ M(x,y)dx+N(x,y)dy=0.\\
-					\end{aligned} \right. \end{equation}
-					Cчитая, что  \(dx\neq0\), система \((2)\) имеет ненулевое решение \((dx,dy)\), и, её определитель равен нулю.</p>
+						\begin{equation}\label{2}
+							\left \{\begin{aligned} 
+							\frac{\partial U}{\partial x}dx+\frac{\partial U}{\partial y}dy=0,\\ 
+							M(x,y)dx+N(x,y)dy=0.\\
+							\end{aligned} \right.
+						\end{equation}
+					Cчитая, что  \(dx\neq0\), система имеет ненулевое решение \((dx,dy)\), и, её определитель равен нулю.</p>
 					<p>Введем функцию \(\mu(x,y)\). 
 						\[\mu(x,y)=\frac{\frac{\partial U(x,y)}{\partial x}}{M(x,y)}=\frac{\frac{\partial U(x,y)}{\partial y}}{N(x,y)}.\]
 					Это равенство выполняется при \(y=\varphi(x)\) и, в частности, в
@@ -89,30 +94,32 @@
 					Теорема доказана.</p>
 					<div class="example">Нахождение интегрирующего множителя</div>
 					<p>Предположим, что интегрирующий множитель \(\mu(x,y)\) для уравнения
-					\((1)\) существует. По теореме 1 из \(\S\ \)7 в \(\Gamma\) имеем
+					(\ref{1}) существует. По теореме 1 из \(\S\ 7\) в \(\Gamma\) имеем
 					  	\[ {\frac{\partial(\mu M)}{\partial y}=\frac{\partial(\mu N)}{\partial x}}.\]
 					Отсюда
-						\[\frac{\partial\mu}{\partial y}-N\frac{\partial\mu}{\partial x}=\mu(\frac{\partial N}{\partial x }-\frac{\partial M}{\partial y}) \hspace{2cm} (3).\]
-					Уравнение для \(\mu(x,y)\) не проще, чем уравнение \((1)\).
+						\begin{equation}\label{3}
+							\frac{\partial\mu}{\partial y}-N\frac{\partial\mu}{\partial x}=\mu(\frac{\partial N}{\partial x }-\frac{\partial M}{\partial y})
+						\end{equation}
+					Уравнение для \(\mu(x,y)\) не проще, чем уравнение (\ref{1}).
 					Возможны частные случаи, когда это уравнение разрешимо.</p>
 					<p>Предположим, что \(\mu\) есть сложная функция:
 					\(\mu=\mu\left[\omega(x,y)\right].\)  Тогда
 					\[\frac{\partial\mu}{\partial x}=\frac{d\mu}{d\omega}\frac{\partial\omega}{\partial x}, \quad \frac{\partial\mu}{\partial y}=\frac{d\mu}{d\omega}\frac{\partial\omega}{\partial y}.\]
-					Подставляя эти выражения в уравнение \((3)\), получим
-					\begin{equation}
-					\label{g1p7_4}
-					\frac{\frac{d\mu}{d\omega}}{\mu}=\frac{\frac{\partial N }{\partial x}-\frac{\partial M}{\partial y}}{M\frac{\partial\omega}{\partial y}-N\frac{\partial\omega}{\partial x}}. \hspace{3cm} (4) \end{equation}</p>
+					Подставляя эти выражения в уравнение (\ref{3}), получим
+						\begin{equation}\label{4}
+							\frac{\frac{d\mu}{d\omega}}{\mu}=\frac{\frac{\partial N }{\partial x}-\frac{\partial M}{\partial y}}{M\frac{\partial\omega}{\partial y}-N\frac{\partial\omega}{\partial x}}.
+						\end{equation}
+					</p>
 					<div class="entry_title">Частные случаи:</div>
 					<div class="example">Случай 1</div>
 					<p>\(\omega=x\) (интегрирующий множитель зависит только от \(x\)). Уравнение
-					\((4)\) принимает вид
-					\begin{equation}
-					\label{g1p7_5} \frac{\frac{d\mu}{dx}}{\mu}=\frac{\frac{\partial N
-					}{\partial x}-\frac{\partial M}{\partial y}}{-N}. \hspace{3cm} (5)
+					(\ref{4}) принимает вид
+					\begin{equation}\label{5} 
+						\frac{\frac{d\mu}{dx}}{\mu}=\frac{\frac{\partial N}{\partial x}-\frac{\partial M}{\partial y}}{-N}.
 					\end{equation}
 					
-					Сначала вычисляется правая часть \((5)\).
-					Если она зависит только от \(x\), то \((5)\) -
+					Сначала вычисляется правая часть (\ref{5}).
+					Если она зависит только от \(x\), то (\ref{5}) -
 					ОДУ с разделяющимися переменными, множитель \(\mu(x)\) находится. Иначе ищем другой путь решения.</p>
 					<div class="example">Случай 2</div>
 					<p>\(\omega=y\). Множитель \(\mu=\mu(y)\) существует в том случае, когда выражение
@@ -128,22 +135,22 @@
 					и если правая часть как функция от произведения \(xy\), то ищем интегрирующий множитель \(\mu=\mu(xy).\)</p>
 
 					<div class="example">Теорема 3</div>
-					<p>Если \(\mu_0\) интегрирующий множитель уравнения \((1)\), т.е.
+					<p>Если \(\mu_0\) интегрирующий множитель уравнения (\ref{1}), т.е.
 						\[ \mu_0(Mdx+Ndy)=dU_0, \]
 					a \(U_0(x,y)=C\) соответствующий ему интеграл этого уравнения, то выражение
 						\[ \mu=\mu_0\varphi(U_0), \]
-					где \(\varphi\) \(-\) произвольная дифференцируемая функция, тоже будет интегрирующим множителем \((1)\).</p>
+					где \(\varphi\) \(-\) произвольная дифференцируемая функция, тоже будет интегрирующим множителем (\ref{1}).</p>
 					<div class="example">Доказательство</div>
-					<p>Умножим левую часть \((1)\) на \(\mu_0\varphi(U_0)\).
+					<p>Умножим левую часть (\ref{1}) на \(\mu_0\varphi(U_0)\).
 						\[ \mu_0\varphi(U_0)(Mdx+Ndy)=\varphi(U_0)\mu_0(Mdx+Ndy)= \]
 						\[ =\varphi(U_0)dU_0=d\int{\varphi(U_0)\,dU_0} \]
-					Левая часть \((1)\) после умножения на \(\mu_0\varphi(U_0)\)
+					Левая часть (\ref{1}) после умножения на \(\mu_0\varphi(U_0)\)
 					стала полным дифференциалом функции \(\int{\varphi(U_0)\,dU_0}.\)</p>
-					<p>Так как \(\varphi\) \(-\) произвольная функция, то уравнение \((1)\) имеет бесчисленное множество интегрирующих множителей.</p>
+					<p>Так как \(\varphi\) \(-\) произвольная функция, то уравнение (\ref{1}) имеет бесчисленное множество интегрирующих множителей.</p>
 
 					<div class="example">Теорема 4</div>
-					<p>Если \(\mu_0\) интегрирующий множитель уравнения \((1)\),
-					a \(U_0(x,y)\) \(-\) соответствующий ему интеграл уравнения \((1)\), то всякий интегрирующий множитель \(\mu_1\) этого уравнения дается формулой
+					<p>Если \(\mu_0\) интегрирующий множитель уравнения (\ref{1}),
+					a \(U_0(x,y)\) \(-\) соответствующий ему интеграл уравнения (\ref{1}), то всякий интегрирующий множитель \(\mu_1\) этого уравнения дается формулой
 						\[ \mu_1=\mu_0\varphi(U_0), \]
 					где \(\varphi\) \(-\) произвольная дифференцируемая функция.</p>
 				</div>

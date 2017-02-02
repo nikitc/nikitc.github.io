@@ -9,7 +9,7 @@
 			MathJax.Hub.Config({
  				displayAlign: "center",
  				"HTML-CSS": { linebreaks: { automatic: true, width: "95% container" } },
-         			   SVG: { linebreaks: { automatic: true } }
+         			   SVG: { linebreaks: { automatic: true } },TeX: {equationNumbers: {autoNumber: "AMS"}, Augment: {  Definitions: {}}}
 			});
 		</script>
 	</head>
@@ -43,8 +43,9 @@
 				<div id="content_col">
 					<div class="entry_title">Сведение системы дифференциальных уравнений к одному уравнению</div>
 					<p>Пусть дана система
-
-						\[\left\{\begin{array}{l} {\dot{x}_{1} =f_{1} (t,x_{1} ,x_{2} ,...,x_{n} )} \\ {\dot{x}_{2} =f_{2} (t,x_{1} ,x_{2} ,...,x_{n} )} \\ {........................} \\ {\dot{x}_{n} =f_{n} (t,x_{1} ,x_{2} ,...,x_{n} )} \end{array}\right. . \hspace{1cm}(13)\]
+						\begin{equation}\label{13}
+							\left\{\begin{array}{l} {\dot{x}_{1} =f_{1} (t,x_{1} ,x_{2} ,...,x_{n} )} \\ {\dot{x}_{2} =f_{2} (t,x_{1} ,x_{2} ,...,x_{n} )} \\ {........................} \\ {\dot{x}_{n} =f_{n} (t,x_{1} ,x_{2} ,...,x_{n} )} \end{array}\right. \tag{13}
+						\end{equation}
 
 					Возьмём первое уравнение, продифференцируем его \(n\) раз, заменяя производные
 					\( \frac{dx_{i} }{dt} \quad i=\overline{1,n}\) правыми частями системы.
@@ -59,24 +60,36 @@
 					И далее
 						\[\frac{d^{n-1} x_{1} }{dt^{n-1} } =f_{n-1}^{*} \left(t,x_{1} ,x_{2} ,...,x_{n} \right),\]
 
-						\[\frac{d^{n} x_{1} }{dt^{n} } =f_{n}^{*} \left(t,x_{1} ,x_{2} ,...,x_{n} \right). \hspace{1cm} (14) \]</p>
+
+						\begin{equation}\label{14}
+							\frac{d^{n} x_{1} }{dt^{n} } =f_{n}^{*} \left(t,x_{1} ,x_{2} ,...,x_{n} \right). \tag{14}
+						\end{equation}
+					</p>
 					<p>Рассмотрим систему
-						\[\left\{\begin{array}{l} {\frac{dx_{1} }{dt} =f_{1} (t,x_{1} ,x_{2} ,...,x_{n} )}
-						\\ {\frac{dx_{1} }{dt^{2} } =f_{2}^{*} (t,x_{1} ,x_{2} ,...,x_{n} )} \\ {..........................} \\ {\frac{dx_1^{n-1} }{dt^{n-1} } =f_{n-1}^{*} (t,x_{1} ,x_{2} ,...,x_{n} )} \end{array}\right. \hspace{1cm}(15)\]
+						\begin{equation}\label{15}
+							\left\{\begin{array}{l} {\frac{dx_{1} }{dt} =f_{1} (t,x_{1} ,x_{2} ,...,x_{n} )}
+							\\ {\frac{dx_{1} }{dt^{2} } =f_{2}^{*} (t,x_{1} ,x_{2} ,...,x_{n} )} \\ {..........................} \\ {\frac{dx_1^{n-1} }{dt^{n-1} } =f_{n-1}^{*} (t,x_{1} ,x_{2} ,...,x_{n} )} \end{array}\right. \tag{15}
+						\end{equation}
 
 					Предположим, что выполнены условия, при которых эта система определяет \(x_{2} ,x_{3} ,\ldots ,x_{n}\), т.е.
-						\[\left\{\begin{array}{l} {x_{2}=g_{2}^{*}(t,x_{1} ,\frac{dx_{1} }{dt } ,\ldots ,\frac{d^{n-1} x_{1} }{dt^{n-1} } )} \\ {............................}
-						\\ {x_{n} =g_{n}^{*} (t,x_{1} ,\frac{dx_{1} }{dt } ,\ldots ,\frac{d^{n-1} x_{1} }{dt^{n-1} } )} \end{array}\right.\]</p>
-					<p>Тогда, подставив их в уравнение \((14)\), получим уравнение \(n\)-го порядка
-						\[\frac{d^{n} x_{1} }{dt^{n} } =\Phi \left(t,x_{1} ,\frac{dx_{1} }{dt} ,\ldots ,\frac{d^{n-1} x_{1} }{dt^{n-1} } \right). \hspace{1cm} (17)\]
+						
+						\begin{equation}\label{16}
+							\left\{\begin{array}{l} {x_{2}=g_{2}^{*}(t,x_{1} ,\frac{dx_{1} }{dt } ,\ldots ,\frac{d^{n-1} x_{1} }{dt^{n-1} } )} \\ {............................}
+							\\ {x_{n} =g_{n}^{*} (t,x_{1} ,\frac{dx_{1} }{dt } ,\ldots ,\frac{d^{n-1} x_{1} }{dt^{n-1} } )} \end{array}\right. \tag{16}
+						\end{equation}
+					</p>
+					<p>Тогда, подставив их в уравнение (\ref{14}), получим уравнение \(n\)-го порядка
+						\begin{equation}\label{17}
+							\frac{d^{n} x_{1} }{dt^{n} } =\Phi \left(t,x_{1} ,\frac{dx_{1} }{dt} ,\ldots ,\frac{d^{n-1} x_{1} }{dt^{n-1} } \right). \tag{17}
+						\end{equation}
 					Пусть найдено общее решение уравнения 
 						\[x_{1} =\varphi (t,C_{1} ,C_{2} ,\ldots ,C_{n} ). \]
 					Подставляя эту функцию в формулы 
-					\((16)\), вычисляем \(x_{2} ,x_{3} ,\ldots ,x_{n}\)
+					(\ref{16}), вычисляем \(x_{2} ,x_{3} ,\ldots ,x_{n}\)
 					как функции \( t,C_{1} ,C_{2} ,\ldots ,C_{n} \).
 					Вместе с функцией 
 						\[x_{1} =\varphi (t,C_{1} ,C_{2} ,\ldots ,C_{n} ) \] 
-						они составляют общее решение системы \((13)\).
+						они составляют общее решение системы (\ref{13}).
 					</p>
 
 				</div>
