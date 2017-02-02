@@ -68,9 +68,9 @@ ul li
 
 .formula img 
 {
-	position:absolute;
-	left:50%;
-	margin-left:-86px;
+	position: absolute;
+	left: 50%;
+	margin-left: -86px;
 
 }
 
@@ -79,7 +79,6 @@ ul li
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-
 }
 
 .graphics p 
