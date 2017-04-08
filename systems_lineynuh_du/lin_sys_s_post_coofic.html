@@ -47,24 +47,24 @@
                 <div id="content_col">
                     <div class="entry_title"> Линейные системы с постоянными коэффициентами</div>
                     <p>
-                        \[\dot{X}=AX+B(t) \hspace{1cm}(11)\]
+                        \[\begin{equation} \label{11}\dot{X}=AX+B(t) \tag{11}\end{equation}\]
                     частный случай линейной системы с переменной матрицей \(A(t).\) Для линейной системы с постоянными коэффициентами
                     всегда существует ФСР, состоящая из элементарных функций и известен эффективный способ построения ФСР.
                     <br>Рассмотрим  однородную систему с постоянными действительными коэффициентами
-                        \[\dot{X}=AX,\hspace{1cm}(12)\]
+                        \[\begin{equation} \label{12}\dot{X}=AX,\tag{12}\end{equation}\]
                         \[ \text{где} \hspace{1cm}
                     A=\left(\begin{array}{ccccc}a_{11}&\ldots& a_{1n}\\\vdots\\a_{n1}&\ldots& a_{nn}\end{array}\right).\]
-                    \(\textbf{Характеристическим уравнением}\) системы \((12)\) называется
-                        \[Det(A-\lambda E)=0, \hspace{1cm}(13)\]
+                    \(\textbf{Характеристическим уравнением}\) системы (\ref{12}) называется
+                        \[\begin{equation} \label{13}Det(A-\lambda E)=0, \tag{13}\end{equation}\]
                     здесь  \(E\) \(-\) единичная матрица \(n\times n\),  или в развернутом виде
-                    \[\left|
+                    \[\begin{equation} \label{14}\left|
                     \begin{array}{ccccc}
                     a_{11}-\lambda & a_{12} & a_{13} & \ldots & a_{1n}\\
                     a_{21} & a_{22}-\lambda & a_{23} & \ldots & a_{2n}\\
                     \cdots&\cdots&\cdots&\cdots&\cdots\\
                     a_{n1} & a_{n2} & a_{n3} & \ldots & a_{nn}-\lambda
                     \end{array}
-                    \right|=0. \hspace{1cm}(14)\]
+                    \right|=0. \tag{14}\end{equation}\]
                     Корни этого уравнения называются \(\textbf{собственными значениями матрицы \(A\)}.\)</p>
                     <p>Пусть  \(\lambda\) \(-\) собственное значение матрицы \(A\). Возможны случаи.
                     <br>\(\textbf{I. Корень характеристического уравнения \(\lambda\) простой.}\)</p>
@@ -73,9 +73,9 @@
                     матрицы \(A\), соответствующий собственному значению \(\lambda\):
                     \[A\textbf{h}=\lambda \textbf{h},\hspace{1cm} \textbf{h}\neq0.\]
                     Собственный вектор находится с точностью до скалярного множителя.</p>
-                    <p>Простому собственному значению \(\lambda\)  матрицы \(A\) в ФСР соответствует решение уравнения \((12)\) вида
+                    <p>Простому собственному значению \(\lambda\)  матрицы \(A\) в ФСР соответствует решение уравнения (\ref{12}) вида
                         \[X=\textbf{h}e^{\lambda t}.\]
-                    Подстановкой в уравнение \((12)\) проверим, что это действительно решение:
+                    Подстановкой в уравнение (\ref{12}) проверим, что это действительно решение:
                         \[\dot{X}=\lambda \textbf{h}e^{\lambda t}=A\textbf{h}e^{\lambda t}=AX.\]</p>
                     <div class="example">Пример</div>
                     <p>Решить систему дифференциальных уравнений
@@ -144,16 +144,16 @@
                     \end{array}\]
                     Каждой серии, например, \(\textbf{h}_1=\textbf{h}^1_1,\,\textbf{h}^2_1,\,\ldots,\,\textbf{h}^p_1\) соответствует
                     \(p\) линейно независимых решений \(X_1,\,\ldots,\,X_p\) системы \(\dot{X}=AX\):
-                    \[\begin{array}{lllllll}
+                    \[\begin{array}{lllllll}\begin{equation} \label{15}
                     X_1=\textbf{h}^1_1e^{\lambda t},\\
                     X_2=(t\textbf{h}^1_1+\textbf{h}^2_1)e^{\lambda t},\\
-                    X_3=\left(\frac{t^2}{2!}\textbf{h}^1_1+t\textbf{h}^2_1+\textbf{h}^3_1\right)e^{\lambda t}, \hspace{1cm}(15)\\
+                    X_3=\left(\frac{t^2}{2!}\textbf{h}^1_1+t\textbf{h}^2_1+\textbf{h}^3_1\right)e^{\lambda t}, \\
                     \ldots,\\
                     X_p=\left(\frac{t^{p-1}}{(p-1)!}\textbf{h}^1_1+\frac{t^{p-2}}{(p-2)!}\textbf{h}^p_1+\cdots+t\textbf{h}^{p-1}_1+
-                    \textbf{h}^p_1\right)e^{\lambda t}.
+                    \textbf{h}^p_1\right)e^{\lambda t}.\tag{15}\end{equation}
                     \end{array}
                     \]
-                    Общее решение системы представляет собой линейную комбинацию вектор-функций вида\((15)\), составленных для каждой серии и для каждого корня
+                    Общее решение системы представляет собой линейную комбинацию вектор-функций вида (\ref{15}), составленных для каждой серии и для каждого корня
                     характеристического уравнения.</p>
                     <div class="example">Пример</div> 
                     <p>Решить систему дифференциальных уравнений

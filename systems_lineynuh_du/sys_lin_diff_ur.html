@@ -61,15 +61,15 @@
                     A(t)=\left\{a_{ij} (t)\right\}_{i,j=1}^{n} , \hspace{0.5cm}
                     \dot{X}=\left(\begin{array}{l} {\dot{x}_{1} } \\ {\dot{x}_{2} } \\ {\, \, \vdots } \\ {\dot{x}_{n} } \end{array}\right)\]
                     Тогда система линейных дифференциальных уравнений запишется:
-                    \[\dot{X}=A(t)X+F(t),\quad X\in R^{n}.\hspace{1cm}(1)\]
+                    \[\begin{equation} \label{1}\dot{X}=A(t)X+F(t),\quad X\in R^{n}.\tag{1}\end{equation}\]
                     Можно воспринимать систему линейных ДУ как векторное дифференциальное уравнение.</p>
                     <p>Возьмём
                     \[t\in (r_{1} ,r_{2} ),\; \; \; X=(x_{1} ,x_{2} ,\ldots ,x_{n} )\in R^{n}.\]
-                    Применим теорему Коши к системе \((1)\), получим, что система \((1)\) имеет всегда единственное решение на
+                    Применим теорему Коши к системе (\ref{1}), получим, что система (\ref{1}) имеет всегда единственное решение на
                     \((r_{1},r_{2})\) при начальных условиях
                     \[X(t_{0} )=X^{0} ,\; t_0\in (r_{1} ,r_{2} ),\; \; \;X^{0}=\left(\begin{array}{l} {x_{1}^{0} } \\ {x_{2}^{0} } \\ {\, \, \vdots } \\ {x_{n}^{0} } \end{array}\right)\in R^{n}
                     \]
-                    Система линейных дифференциальных уравнений \((1)\) \(\dot{X}=A(t)X+F(t),\quad X\in R^{n} \) - неоднородная система.
+                    Система линейных дифференциальных уравнений (\ref{1}) \(\dot{X}=A(t)X+F(t),\quad X\in R^{n} \) - неоднородная система.
                     Если \(F(t)\equiv 0\), то \(\dot{X}=A(t)\cdot X,\quad X\in R^{n} \)- однородная система.</p>
                     <div class="example">Предложение.</div>
                     <p>Пусть \(X(t)\) -- решение однородной системы и пусть при некотором значении
@@ -106,8 +106,8 @@
                     и пусть \(X_{1} ,\; X_{2} ,\ldots ,X_{n} \) - решения этой системы. Имеем представление 
                     \[\dot{x}_{ik} =\sum _{j=1}^{n}a_{ij} (t)x_{jk}  ,\quad i=1,\; 2,\, \ldots ,\, n,\quad \; k=1,\; 2,\, \ldots ,\, n,\]
                     что можно записать в матричной форме
-                    \[\dot{Y}=A(t)Y, \hspace{1cm}(2)\]
-                    так \(Y =\left\{X_{1} ,\; X_{2} ,\ldots ,X_{n} \right\}\) - решение матричного уравнения \((2)\).</p>
+                    \[\begin{equation} \label{2}\dot{Y}=A(t)Y, \tag{2}\end{equation}\]
+                    так \(Y =\left\{X_{1} ,\; X_{2} ,\ldots ,X_{n} \right\}\) - решение матричного уравнения (\ref{2}).</p>
                     <div class="example">Определение.</div>
                     <p>Вектор-функции \(X_{1} (t),\; X_{2} (t),\ldots ,X_{n} (t)\) линейно зависимы при \(\; t\in (r_{1} ,r_{2} )\),
                     если
@@ -199,20 +199,20 @@
                     <br>\(\textbf{Теорема доказана.}\)</p>
                     <div class="example">Формула Лиувилля-Остроградского.</div>
                     <p>Пусть дана линейная система \(\dot{X}=A(t)X\), \(X\in R^{n} \) , распишем её в виде
-                        \[\dot{x}_{i} =a_{i1} (t)x_{1} +a_{i2} (t)x_{2} +\ldots +a_{in} (t)x_{n} \quad \quad i=\overline{1,n}, \hspace{1cm}(3)\]
+                        \[\begin{equation} \label{3}\dot{x}_{i} =a_{i1} (t)x_{1} +a_{i2} (t)x_{2} +\ldots +a_{in} (t)x_{n} \quad \quad i=\overline{1,n}, \tag{3}\end{equation}\]
                     столбцы \(X_{1} ,X_{2} ,\ldots ,X_{n} \) - решение уравнения, рассмотрим определитель Вронского для этих решений
                         \[\begin{array}{l} {\quad \quad \quad \underline{X_{1} \; X_{2} \, \ldots \, X_{n} }} \\ {W(t)=\left|\begin{array}{l} {x_{11} \; x_{12} \, \ldots \, x_{1n} } \\ {x_{21} \; x_{22} \, \ldots \, x_{2n} } \\ {\, \vdots \, \, \, \; \; \, \vdots \quad \, \vdots \quad \vdots } \\ {x_{n1} \; x_{n2} \, \ldots \, x_{nn} } \end{array}\right|\quad \left|\begin{array}{l} {z_{1} } \\ {z_{2} } \\ {\, \vdots } \\ {z_{n} } \end{array}\right. } \end{array},\]</p>
                      т. е. за \(z_{i} \) обозначим векторы строки определителя
                         \[z_{i} =(x_{i1} \; x_{i2} \, \ldots \, x_{in} )\; \; i=\overline{1,n}.\]
-                    Подставим поочерёдно \(X_{1} ,X_{2} ,\ldots ,X_{n} \) в уравнение \((3)\). 
-                     \[\hspace{1cm}
+                    Подставим поочерёдно \(X_{1} ,X_{2} ,\ldots ,X_{n} \) в уравнение (\ref{3}). 
+                     \[\begin{equation} \label{4}\hspace{1cm}
                     \left\{\begin{array}{l} {\dot{x}_{i1} =a_{i1} (t)x_{11} +a_{i2} (t)x_{21} +\ldots +a_{in} (t)x_{n1} }
-                    \\ {\dot{x}_{i2} =a_{i1} (t)x_{12} +a_{i2} (t)x_{22} +\ldots +a_{in} (t)x_{n2} } \hspace{1cm}(4)
+                    \\ {\dot{x}_{i2} =a_{i1} (t)x_{12} +a_{i2} (t)x_{22} +\ldots +a_{in} (t)x_{n2} } \tag{4}
                     \\ {...........................................} \\
-                    {\dot{x}_{in} =a_{i1} (t)x_{1n} +a_{i2} (t)x_{2n} +\ldots +a_{in} (t)x_{nn} } \end{array}\right.
+                    {\dot{x}_{in} =a_{i1} (t)x_{1n} +a_{i2} (t)x_{2n} +\ldots +a_{in} (t)x_{nn} } \end{array}\right.\end{equation}
                     \] 
-                    Систему \((4)\) запишем в векторной форме 
-                         \[\dot{z}_{i} =a_{i1} (t)z_{1} +a_{i2} (t)z_{2} +\ldots +a_{in} (t)z_{n} \quad \quad i=\overline{1,n}. \hspace{1cm}(5)\] 
+                    Систему (\ref{4}) запишем в векторной форме 
+                         \[\begin{equation} \label{5}\dot{z}_{i} =a_{i1} (t)z_{1} +a_{i2} (t)z_{2} +\ldots +a_{in} (t)z_{n} \quad \quad i=\overline{1,n}. \tag{5}\end{equation}\] 
                     Для вычисления производной определителя Вронского воспользуемся правилом 
                         \[\dot{W}(t)=W_{1} +W_{2} +\ldots +W_{n}.\] 
                         \[W_{i} =\left|\begin{array}{l} {z_{_{1} } } \\ {z_{2} } \\ {...} \\ {\dot{z}_{i} } \\ {...} \\ {z_{n} } \end{array}\right|=
