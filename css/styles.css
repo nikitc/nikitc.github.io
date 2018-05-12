@@ -282,7 +282,7 @@ ul li
 	font-size: 14px;
 	color: #757575;
 	padding: 14px 12px 15px 12px;
-	text-align: center;
+	text-align: center; 
 }
 
 #subfooter 
@@ -321,6 +321,11 @@ ul li
 	cursor: default;
 }
 
+#footer a 
+{
+	text-decoration: none;
+}
+
 @media (max-width: 768px) {
 	#content_col img
 	{
@@ -333,5 +338,4 @@ ul li
 		display: flex;
 		flex-direction: column;
 	}
-
 }
